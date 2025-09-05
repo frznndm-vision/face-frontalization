@@ -60,7 +60,7 @@ docker run -p 8080:8080 facepoke
 
 نسخه‌ی دمو روی Hugging Face Space در دسترس است، اما برای عملکرد حرفه‌ای بهتر است محلی اجرا شود.
 ---
-###  LivePortrait
+##  LivePortrait
 ```bash
 نصب: conda create -n liveportrait python=3.8 + نصب dependencyها.
 
@@ -68,8 +68,8 @@ docker run -p 8080:8080 facepoke
 
 ویژگی‌ها: سرعت بالا، پشتیبانی از حیوانات.
 ---
-### AniPortrait
-```bash
+## AniPortrait
+
 
 نصب: pip install -r requirements.txt
 
@@ -77,7 +77,7 @@ docker run -p 8080:8080 facepoke
 
 ویژگی‌ها: انیمیشن پرتره بر اساس صدا (Audio-Driven).
 ---
-### FSRT
+## FSRT
 ```bash
 
 نصب: نیاز به PyTorch + face-alignment.
