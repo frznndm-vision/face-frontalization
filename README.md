@@ -31,28 +31,26 @@
 ---
 
 ## نحوه اجرا
+## نحوه اجرا (Setup & Run)
 
 ### FacePoke
-ابزار real-time برای تغییر حالت سر و صورت روی پرتره‌ها (مبتنی بر LivePortrait).  
-
-#### پیش‌نیاز
-- Linux + Python 3.10 + CUDA 12.4 (NVIDIA GPU)  
-- Git LFS:
-نصب محلیgit clone https://github.com/jbilcke-hf/FacePoke.git
+```bash
+# پیش‌نیاز: Python 3.10 + CUDA 12.4 + Git LFS
+git clone https://github.com/jbilcke-hf/FacePoke.git
 cd FacePoke
 pip3 install --upgrade -r requirements.txt
-
 cd client
 bun install
 bun build ./src/index.tsx --outdir ../public/
 cd ..
-
 python app.py
-# سپس مرورگر: http://localhost:8080
+# مرورگر: http://localhost:8080
 
-
-اجرای Dockerdocker build -t facepoke .
+# اجرای Docker
+docker build -t facepoke .
 docker run -p 8080:8080 facepoke
+
+
 
 نکات
 
@@ -62,15 +60,16 @@ docker run -p 8080:8080 facepoke
 
 نسخه‌ی دمو روی Hugging Face Space در دسترس است، اما برای عملکرد حرفه‌ای بهتر است محلی اجرا شود.
 
-LivePortrait
-
+###  LivePortrait
+```bash
 نصب: conda create -n liveportrait python=3.8 + نصب dependencyها.
 
 اجرا: اسکریپت demo برای تولید ویدیو.
 
 ویژگی‌ها: سرعت بالا، پشتیبانی از حیوانات.
 
-AniPortrait
+### AniPortrait
+```bash
 
 نصب: pip install -r requirements.txt
 
@@ -78,7 +77,8 @@ AniPortrait
 
 ویژگی‌ها: انیمیشن پرتره بر اساس صدا (Audio-Driven).
 
-FSRT
+### FSRT
+```bash
 
 نصب: نیاز به PyTorch + face-alignment.
 
@@ -86,7 +86,8 @@ FSRT
 
 ویژگی‌ها: CVPR 2024، Transformer-based.
 
-scaleway/frontalization
+### scaleway/frontalization
+```bash
 
 نصب: PyTorch + NVIDIA DALI.
 
@@ -94,7 +95,8 @@ scaleway/frontalization
 
 ویژگی‌ها: GAN برای frontalization.
 
-FFWM
+### FFWM
+```bash
 
 نصب: bash setup.sh (PyTorch 1.5 توصیه می‌شود).
 
@@ -116,16 +118,3 @@ FSRT دقت بالایی در انتقال حالت‌ها دارد.
 
 FacePoke ابزاری ساده و تعاملی برای دمو و نمایش زنده است.
 
-منابع و استناد
-
-FacePoke – jbilcke-hf
-
-LivePortrait – KwaiVGI
-
-AniPortrait – Zejun-Yang
-
-FSRT – andrerochow
-
-scaleway/frontalization
-
-FFWM – csyxwei
