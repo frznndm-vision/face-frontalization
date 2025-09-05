@@ -2,44 +2,41 @@
 # پروژه: مقایسه مدل‌های Face Frontalization / Face Frontalization-Related Tasks
 
 ## مقدمه
-در این پروژه، چندین مدل Open-Source را برای تسک frontalization (یا Face Reenactment / Animation) اجرا کرده‌ایم و خروجی‌های آن‌ها را از نظر کیفیت، سرعت اجرای مدل، نیاز به منابع و سایر معیارها با هم مقایسه کرده‌ایم.
+در این پروژه، چندین مدل Open-Source را برای تسک **Frontalization** (یا Face Reenactment / Animation) اجرا کرده‌ایم و خروجی‌های آن‌ها را از نظر کیفیت، سرعت اجرای مدل، نیاز به منابع و سایر معیارها با هم مقایسه کرده‌ایم.
+
+---
 
 ## مدل‌های بررسی‌شده
-1. **FacePoke** – ابزار تعامل مستقیم با تصویر برای جابه‌جایی سر مبتنی بر LivePortrait (Hugging Face Space) :contentReference[oaicite:6]{index=6}  
-2. **LivePortrait** – مدل انیمیشن پرتره کارآمد با قابلیت‌های Stitching و Retarget Control :contentReference[oaicite:7]{index=7}  
-3. **AniPortrait** – انیمیشن پرتره مبتنی بر صدا با امکان face reenactment :contentReference[oaicite:8]{index=8}  
-4. **FSRT** – فریم‌ورک CVPR 2024 برای face reenactment با در نظر گرفتن HEAD-POSE، EMOTIONS و APPEARANCE :contentReference[oaicite:9]{index=9}  
-5. **scaleway/frontalization** – پیاده‌سازی GAN برای frontalization با DALI برای پردازش سریع داده‌ها :contentReference[oaicite:10]{index=10}  
-6. **FFWM** – مدل warp مبتنی بر جریان برای frontalization با نظارت نوری متفاوت (ECCV 2020) :contentReference[oaicite:11]{index=11}
+1. [**FacePoke**](https://github.com/jbilcke-hf/FacePoke) – ابزار تعامل مستقیم با تصویر برای جابه‌جایی سر مبتنی بر LivePortrait (Hugging Face Space).  
+2. [**LivePortrait**](https://github.com/KwaiVGI/LivePortrait) – مدل انیمیشن پرتره کارآمد با قابلیت‌های Stitching و Retarget Control.  
+3. [**AniPortrait**](https://github.com/Zejun-Yang/AniPortrait/tree/main) – انیمیشن پرتره مبتنی بر صدا با امکان Face Reenactment.  
+4. [**FSRT**](https://github.com/andrerochow/fsrt) – فریم‌ورک CVPR 2024 برای Face Reenactment با در نظر گرفتن HEAD-POSE، EMOTIONS و APPEARANCE.  
+5. [**scaleway/frontalization**](https://github.com/scaleway/frontalization) – پیاده‌سازی GAN برای Frontalization با DALI برای پردازش سریع داده‌ها.  
+6. [**FFWM**](https://github.com/csyxwei/FFWM) – مدل warp مبتنی بر جریان برای Frontalization با نظارت نوری متفاوت (ECCV 2020).  
+
+---
 
 ## معیارهای مقایسه
-| مدل | سرعت اجرا (FPS) | کیفیت خروجی | پیچیدگی نصب | استفاده از GPU/Resource | نکات خاص |
-|------|------------------|--------------|--------------|--------------------------|------------|
-| FacePoke | – | تعاملی، LiveDemo | Docker / محلی | نیاز GPU | مناسب تعامل |
-| LivePortrait | – | طبیعی | نیاز به Conda/FFmpeg | متوسط | پشتیبانی از حیوانات |
-| AniPortrait | – | صوت به تصویر | CLI + Gradio | وزن‌های pretrained | پشتیبانی از audio-driven |
-| FSRT | – | رونویسی دقیق حرکت | PyTorch + face-alignment | بالا | motion relative/absolute |
-| scaleway | – | frontalization GAN | PyTorch + DALI | متوسط | توضیحات کامل داده‌ها |
-| FFWM | – | warp-based | PyTorch 1.5 + setup.sh | متوسط | توجه به نورپردازی inconsistent |
+| مدل              | سرعت اجرا (FPS) | کیفیت خروجی | پیچیدگی نصب          | استفاده از GPU/Resource | نکات خاص |
+|------------------|------------------|--------------|----------------------|--------------------------|-----------|
+| FacePoke         | –                | تعاملی، LiveDemo | Docker / محلی       | نیاز GPU                 | مناسب تعامل زنده |
+| LivePortrait     | –                | طبیعی       | Conda + FFmpeg       | متوسط                    | پشتیبانی از حیوانات |
+| AniPortrait      | –                | صوت به تصویر | CLI + Gradio         | وزن‌های pretrained       | Audio-Driven |
+| FSRT             | –                | دقیق         | PyTorch + face-alignment | بالا                 | Motion relative/absolute |
+| scaleway         | –                | GAN          | PyTorch + DALI       | متوسط                    | پیاده‌سازی GAN کلاسیک |
+| FFWM             | –                | warp-based   | PyTorch 1.5 + setup.sh | متوسط                  | مناسب نورپردازی نامتوازن |
 
-**نکته:** مقادیر دقیق (FPS، امتیاز کیفیت، یا metrics عددی) باید پس از اجرای مدل‌ها وارد شود.
+**نکته:** مقادیر دقیق (FPS، امتیاز کیفیت، یا metrics عددی) باید پس از اجرای عملی وارد شود.
 
-## نتایج
-در این بخش تصاویر خروجی، جدول امتیازها، نظرات یا... قرار می‌گیرد (مثلاً FID, SSIM, سرعت اجرا).
-
-## نتیجه‌گیری
-مثلاً:
-- مدل‌های صوتی مانند AniPortrait برای جلوه‌های سینماتیک مناسب هستند.
-- FSRT دقت بالایی در انتقال حالت دارد.
-- مدل‌های GAN مانند scaleway و FFWM در frontalization عملکرد خوبی ارائه داده‌اند.
+---
 
 ## نحوه اجرا
-برای هر مدل، مراحل نصب و اجرا رو لیست کنید:
-- Clone repo
-- نصب وابستگی‌ها
-- نحوه اجرا (CLI یا اسکریپت)
-- توجه به GPU یا فایل‌های pretrained
 
-## منابع و استناد
-در آخر:
+### FacePoke
+ابزار real-time برای تغییر حالت سر و صورت روی پرتره‌ها (مبتنی بر LivePortrait).  
 
+#### پیش‌نیاز
+- Linux + Python 3.10 + CUDA 12.4 (NVIDIA GPU)  
+- Git LFS:
+```bash
+git lfs install
