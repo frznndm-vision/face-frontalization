@@ -40,3 +40,81 @@
 - Git LFS:
 ```bash
 git lfs install
+نصب محلی
+git clone https://github.com/jbilcke-hf/FacePoke.git
+cd FacePoke
+pip3 install --upgrade -r requirements.txt
+
+cd client
+bun install
+bun build ./src/index.tsx --outdir ../public/
+cd ..
+
+python app.py
+# سپس مرورگر: http://localhost:8080
+
+اجرای Docker
+docker build -t facepoke .
+docker run -p 8080:8080 facepoke
+
+نکات
+
+توسعه‌دهنده فقط روی Linux (Python 3.10 + CUDA 12.4) تست کرده است.
+
+روی Apple Silicon برخی کاربران خطای «Failed to initialize face detection» گزارش داده‌اند.
+
+نسخه‌ی دمو روی Hugging Face Space در دسترس است، اما برای عملکرد حرفه‌ای بهتر است محلی اجرا شود.
+
+LivePortrait
+
+نصب: conda create -n liveportrait python=3.8 + نصب dependencyها.
+
+اجرا: اسکریپت demo برای تولید ویدیو.
+
+ویژگی‌ها: سرعت بالا، پشتیبانی از حیوانات.
+
+AniPortrait
+
+نصب: pip install -r requirements.txt
+
+اجرا: CLI یا Gradio.
+
+ویژگی‌ها: انیمیشن پرتره بر اساس صدا (Audio-Driven).
+
+FSRT
+
+نصب: نیاز به PyTorch + face-alignment.
+
+اجرا: اسکریپت‌های train و eval.
+
+ویژگی‌ها: CVPR 2024، Transformer-based.
+
+scaleway/frontalization
+
+نصب: PyTorch + NVIDIA DALI.
+
+اجرا: اسکریپت‌های آموزش/ارزیابی موجود.
+
+ویژگی‌ها: GAN برای frontalization.
+
+FFWM
+
+نصب: bash setup.sh (PyTorch 1.5 توصیه می‌شود).
+
+اجرا: اسکریپت training و evaluation.
+
+ویژگی‌ها: warp-based frontalization.
+
+نتایج
+
+در این بخش تصاویر خروجی، جدول امتیازها و متریک‌ها (FID, SSIM, FPS و غیره) قرار داده خواهد شد.
+
+نتیجه‌گیری
+
+مدل‌های AniPortrait و LivePortrait برای کاربردهای تعاملی/سینماتیک مناسب‌تر هستند.
+
+FSRT دقت بالایی در انتقال حالت‌ها دارد.
+
+مدل‌های GAN مانند scaleway و FFWM در Frontalization کلاسیک عملکرد خوبی دارند.
+
+FacePoke ابزاری ساده و تعاملی برای دمو و نمایش زنده است.
