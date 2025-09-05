@@ -59,7 +59,7 @@ docker run -p 8080:8080 facepoke
 روی Apple Silicon برخی کاربران خطای «Failed to initialize face detection» گزارش داده‌اند.
 
 نسخه‌ی دمو روی Hugging Face Space در دسترس است، اما برای عملکرد حرفه‌ای بهتر است محلی اجرا شود.
-
+---
 ###  LivePortrait
 ```bash
 نصب: conda create -n liveportrait python=3.8 + نصب dependencyها.
@@ -67,7 +67,7 @@ docker run -p 8080:8080 facepoke
 اجرا: اسکریپت demo برای تولید ویدیو.
 
 ویژگی‌ها: سرعت بالا، پشتیبانی از حیوانات.
-
+---
 ### AniPortrait
 ```bash
 
@@ -76,7 +76,7 @@ docker run -p 8080:8080 facepoke
 اجرا: CLI یا Gradio.
 
 ویژگی‌ها: انیمیشن پرتره بر اساس صدا (Audio-Driven).
-
+---
 ### FSRT
 ```bash
 
@@ -85,7 +85,7 @@ docker run -p 8080:8080 facepoke
 اجرا: اسکریپت‌های train و eval.
 
 ویژگی‌ها: CVPR 2024، Transformer-based.
-
+---
 ### scaleway/frontalization
 ```bash
 
