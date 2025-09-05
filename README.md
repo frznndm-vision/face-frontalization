@@ -33,8 +33,8 @@
 
 
 ![Generated Image](download.png)
-![Generated Image](download (1).png)
-![Generated Image](download (2).png)
+![Generated Image1](download(1).png)
+![Generated Image2](download(2).png)
 
 
 ## نحوه اجرا
