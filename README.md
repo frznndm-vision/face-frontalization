@@ -29,10 +29,10 @@
 **نکته:** مقادیر دقیق (FPS، امتیاز کیفیت، یا metrics عددی) باید پس از اجرای عملی وارد شود.
 
 ---
-# نمونه نمایش عکس در README
+# 
 
-![download.jpg]
-![Generated Image](images/generated.jpg)
+![download.png]
+![Generated Image](download.png)
 
 
 ## نحوه اجرا
