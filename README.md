@@ -66,24 +66,24 @@ python app.py
 docker build -t facepoke .
 docker run -p 8080:8080 facepoke
 
-# 
+###
 
 
-نکات
+Notes
 
-توسعه‌دهنده فقط روی Linux (Python 3.10 + CUDA 12.4) تست کرده است.
+Tested on Linux (Python 3.10 + CUDA 12.4).
 
-روی Apple Silicon برخی کاربران خطای «Failed to initialize face detection» گزارش داده‌اند.
+On Apple Silicon some users reported: “Failed to initialize face detection”.
 
-نسخه‌ی دمو روی Hugging Face Space در دسترس است، اما برای عملکرد حرفه‌ای بهتر است محلی اجرا شود.
+Demo version available on Hugging Face Space, but local execution is recommended.
 ---
 ##  LivePortrait
 ```bash
-نصب: conda create -n liveportrait python=3.8 + نصب dependencyها.
-
-اجرا: اسکریپت demo برای تولید ویدیو.
-
-ویژگی‌ها: سرعت بالا، پشتیبانی از حیوانات.
+# Installation
+conda create -n liveportrait python=3.8
+# Install dependencies
+# Run demo script for video generation
+Features: Fast execution, animal support.
 ---
 ## AniPortrait
 
