@@ -1,54 +1,57 @@
-# face-frontalization
-# پروژه: مقایسه مدل‌های Face Frontalization / Face Frontalization-Related Tasks
-
-## مقدمه
-در این پروژه، چندین مدل Open-Source را برای تسک **Frontalization** (یا Face Reenactment / Animation) اجرا کرده‌ایم و خروجی‌های آن‌ها را از نظر کیفیت، سرعت اجرای مدل، نیاز به منابع و سایر معیارها با هم مقایسه کرده‌ایم.
+# Face Frontalization
+**Project: Comparison of Face Frontalization Models / Face Frontalization-Related Tasks**
 
 ---
 
-## مدل‌های بررسی‌شده
-1. [**FacePoke**](https://github.com/jbilcke-hf/FacePoke) – ابزار تعامل مستقیم با تصویر برای جابه‌جایی سر مبتنی بر LivePortrait (Hugging Face Space).  
-2. [**LivePortrait**](https://github.com/KwaiVGI/LivePortrait) – مدل انیمیشن پرتره کارآمد با قابلیت‌های Stitching و Retarget Control.  
-3. [**AniPortrait**](https://github.com/Zejun-Yang/AniPortrait/tree/main) – انیمیشن پرتره مبتنی بر صدا با امکان Face Reenactment.  
-4. [**FSRT**](https://github.com/andrerochow/fsrt) – فریم‌ورک CVPR 2024 برای Face Reenactment با در نظر گرفتن HEAD-POSE، EMOTIONS و APPEARANCE.  
-5. [**scaleway/frontalization**](https://github.com/scaleway/frontalization) – پیاده‌سازی GAN برای Frontalization با DALI برای پردازش سریع داده‌ها.  
-6. [**FFWM**](https://github.com/csyxwei/FFWM) – مدل warp مبتنی بر جریان برای Frontalization با نظارت نوری متفاوت (ECCV 2020).  
+## 📌 Introduction
+In this project, we implemented several **open-source models** for the **Frontalization** task (also known as Face Reenactment / Animation).  
+We compared their outputs in terms of:
+
+- Output quality  
+- Model execution speed  
+- Resource requirements  
+- Installation complexity  
+- Special features  
 
 ---
 
-## معیارهای مقایسه
-| مدل              | سرعت اجرا (FPS) | کیفیت خروجی | پیچیدگی نصب          | استفاده از GPU/Resource | نکات خاص |
-|------------------|------------------|--------------|----------------------|--------------------------|-----------|
-| FacePoke         | –                | تعاملی، LiveDemo | Docker / محلی       | نیاز GPU                 | مناسب تعامل زنده |
-| LivePortrait     | –                | طبیعی       | Conda + FFmpeg       | متوسط                    | پشتیبانی از حیوانات |
-| AniPortrait      | –                | صوت به تصویر | CLI + Gradio         | وزن‌های pretrained       | Audio-Driven |
-| FSRT             | –                | دقیق         | PyTorch + face-alignment | بالا                 | Motion relative/absolute |
-| scaleway         | –                | GAN          | PyTorch + DALI       | متوسط                    | پیاده‌سازی GAN کلاسیک |
-| FFWM             | –                | warp-based   | PyTorch 1.5 + setup.sh | متوسط                  | مناسب نورپردازی نامتوازن |
-
-**نکته:** مقادیر دقیق (FPS، امتیاز کیفیت، یا metrics عددی) باید پس از اجرای عملی وارد شود.
-
----
-# 
-
-
-![Generated Image](download.png)
-
-----
-
-![Generated Image1](facefront.png)
+## 🔍 Reviewed Models
+1. [**FacePoke**](https://github.com/jbilcke-hf/FacePoke) – Interactive tool for direct image manipulation, enabling head movement (based on LivePortrait).  
+2. [**LivePortrait**](https://github.com/KwaiVGI/LivePortrait) – Efficient portrait animation model with **stitching** and **retarget control**.  
+3. [**AniPortrait**](https://github.com/Zejun-Yang/AniPortrait/tree/main) – Voice-driven portrait animation with **face reenactment**.  
+4. [**FSRT**](https://github.com/andrerochow/fsrt) – CVPR 2024 framework for face reenactment, considering **head-pose, emotions, and appearance**.  
+5. [**scaleway/frontalization**](https://github.com/scaleway/frontalization) – GAN-based frontalization implementation with **NVIDIA DALI** for fast data processing.  
+6. [**FFWM**](https://github.com/csyxwei/FFWM) – Flow-based warp model for frontalization with optical supervision (ECCV 2020).  
 
 ---
 
-![Generated Image2](2.png)
+## 📊 Comparison Table
 
+| Model            | Speed (FPS) | Output Quality | Installation Complexity | GPU/Resource Usage | Special Notes |
+|------------------|-------------|----------------|-------------------------|--------------------|---------------|
+| **FacePoke**     | –           | Interactive, LiveDemo | Docker / Local | Requires GPU       | Good for live interaction |
+| **LivePortrait** | –           | Natural        | Conda + FFmpeg          | Medium             | Supports animals |
+| **AniPortrait**  | –           | Audio-to-Image | CLI + Gradio            | Pretrained weights | Audio-driven |
+| **FSRT**         | –           | Precise        | PyTorch + face-alignment| High               | Motion relative/absolute |
+| **scaleway**     | –           | GAN            | PyTorch + DALI          | Medium             | Classic GAN implementation |
+| **FFWM**         | –           | Warp-based     | PyTorch 1.5 + setup.sh  | Medium             | Good for uneven lighting |
 
-## نحوه اجرا
-## نحوه اجرا (Setup & Run)
+> **Note:** Exact values (FPS, metrics such as SSIM/FID, etc.) should be added after real-world testing.
 
-### FacePoke
+---
+
+## 🖼️ Sample Outputs
+![Generated Image](download.png)  
+![Generated Image1](facefront.png)  
+![Generated Image2](2.png)  
+
+---
+
+## ⚙️ Setup & Run
+
+### 1️⃣ FacePoke
 ```bash
-# پیش‌نیاز: Python 3.10 + CUDA 12.4 + Git LFS
+# Requirements: Python 3.10 + CUDA 12.4 + Git LFS
 git clone https://github.com/jbilcke-hf/FacePoke.git
 cd FacePoke
 pip3 install --upgrade -r requirements.txt
@@ -57,12 +60,13 @@ bun install
 bun build ./src/index.tsx --outdir ../public/
 cd ..
 python app.py
-# مرورگر: http://localhost:8080
+# Browser: http://localhost:8080
 
-# اجرای Docker
+# Run with Docker
 docker build -t facepoke .
 docker run -p 8080:8080 facepoke
 
+# 
 
 
 نکات
