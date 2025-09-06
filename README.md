@@ -77,7 +77,9 @@ On Apple Silicon some users reported: “Failed to initialize face detection”.
 
 Demo version available on Hugging Face Space, but local execution is recommended.
 ---
-##  LivePortrait
+
+
+###  LivePortrait
 ```bash
 # Installation
 conda create -n liveportrait python=3.8
