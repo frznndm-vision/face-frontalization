@@ -143,7 +143,23 @@ Similarity:  0.7500836849212646
 
 اجرا: اسکریپت‌های train و eval.
 
-ویژگی‌ها: CVPR 2024، Transformer-based.
+ویژگی‌ها: CVPR 2024، Transformer-based.'
+fsrt/1.jpeg
+validation/GT/1.jpg
+Similarity:  0.2637157440185547
+---------------------------------------------------------
+fsrt/2.jpeg
+validation/GT/2.jpg
+Similarity:  0.3740246891975403
+---------------------------------------------------------
+fsrt/3.jpeg
+validation/GT/3.jpg
+Similarity:  0.44765394926071167
+---------------------------------------------------------
+fsrt/4.jpeg
+validation/GT/4.jpg
+Similarity:  0.38270801305770874
+---------------------------------------------------------
 ---
 ### scaleway/frontalization
 ```bash
