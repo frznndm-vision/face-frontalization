@@ -87,6 +87,27 @@ conda create -n liveportrait python=3.8
 # Run demo script for video generation
 Features: Fast execution, animal support.
 ---
+
+li/1.jpg
+validation/GT/1.jpg
+Similarity:  0.2970532178878784
+---------------------------------------------------------
+li/2.jpg
+validation/GT/2.jpg
+Similarity:  0.5467574000358582
+---------------------------------------------------------
+li/3.jpg
+validation/GT/3.jpg
+Similarity:  0.5549336671829224
+---------------------------------------------------------
+li/4.jpg
+validation/GT/4.jpg
+Similarity:  0.48108571767807007
+---------------------------------------------------------
+li/5.jpg
+validation/GT/5.jpg
+Similarity:  0.7500836849212646
+---------------------------------------------------------
 ## AniPortrait
 
 
