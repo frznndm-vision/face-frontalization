@@ -39,7 +39,26 @@ We compared their outputs in terms of:
 > **Note:** Exact values (FPS, metrics such as SSIM/FID, etc.) should be added after real-world testing.
 
 ---
-
+test/1.jpg
+validation/GT/1.jpg
+Similarity:  0.5890898704528809
+---------------------------------------------------------
+test/2.jpg
+validation/GT/2.jpg
+Similarity:  0.727418065071106
+---------------------------------------------------------
+test/3.jpg
+validation/GT/3.jpg
+Similarity:  0.7173833847045898
+---------------------------------------------------------
+test/4.jpg
+validation/GT/4.jpg
+Similarity:  0.6479834318161011
+---------------------------------------------------------
+test/5.jpg
+validation/GT/5.jpg
+Similarity:  0.75990891456604
+---------------------------------------------------------
 ## 🖼️ Sample Outputs
 ![Generated Image](download.png)  
 ![Generated Image1](facefront.png)  
